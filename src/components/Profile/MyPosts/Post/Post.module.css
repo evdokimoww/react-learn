@@ -1,0 +1,11 @@
+.item{
+    color: chocolate;
+    padding: 10px;
+    border: 1px solid grey;
+    margin: 5px 0;
+    width: 500px;
+}
+
+.item img{
+    width: 40px;
+}
