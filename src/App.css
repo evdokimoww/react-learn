@@ -9,10 +9,10 @@ body{
 
   grid-template-areas:
   "h h"
-  "n c";
+  "s c";
 
   grid-template-rows: 80px 1fr;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 2.5fr 9.5fr;
   grid-gap: 10px;
 }
 

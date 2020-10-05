@@ -1,0 +1,12 @@
+.friendsItem{
+    text-align: center;
+}
+
+.friendAvatar img{
+    max-width: 46px;
+    width: 100%;
+}
+
+.friendName{
+    font-size: 0.8em;
+}

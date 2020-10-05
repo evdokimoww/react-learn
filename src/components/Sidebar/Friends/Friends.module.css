@@ -1,0 +1,10 @@
+.friendsWrapper{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.friendAvatar img{
+    width: 100%;
+}

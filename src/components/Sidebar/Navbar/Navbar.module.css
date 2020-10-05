@@ -1,0 +1,15 @@
+.nav{
+    grid-area: n;
+}
+
+.item a{
+    color: black;
+    text-decoration: none;
+    line-height: 2em;
+}
+
+.item a.activeLink{
+    color: darkblue;
+    font-weight: bold;
+    text-decoration: underline;
+}

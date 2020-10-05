@@ -1,21 +1,9 @@
-.nav{
-    grid-area: n;
+.sidebar{
+    grid-area: s;
 
     background-color: #FFF;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     padding: 20px;
-}
-
-.item a{
-    color: black;
-    text-decoration: none;
-    line-height: 2em;
-}
-
-.item a.activeLink{
-    color: darkblue;
-    font-weight: bold;
-    text-decoration: underline;
 }
