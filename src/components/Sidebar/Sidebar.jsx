@@ -1,14 +1,14 @@
 import React from "react";
 import s from "./Sidebar.module.css";
-import Friends from "./Friends/Friends";
 import Navbar from "./Navbar/Navbar";
+import FriendsContainer from "./Friends/FriendsContainer";
 
 const Sidebar = (props) => {
-
+debugger
     return (
         <div className={s.sidebar}>
             <Navbar />
-            <Friends state={props.state}/>
+            <FriendsContainer />
         </div>
     );
 }
