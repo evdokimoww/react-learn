@@ -4,7 +4,6 @@ import Navbar from "./Navbar/Navbar";
 import FriendsContainer from "./Friends/FriendsContainer";
 
 const Sidebar = (props) => {
-debugger
     return (
         <div className={s.sidebar}>
             <Navbar />

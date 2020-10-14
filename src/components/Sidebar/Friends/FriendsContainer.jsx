@@ -1,5 +1,4 @@
 import React from "react";
-import FriendItem from "./FriendItem/FriendItem";
 import {connect} from "react-redux";
 import Friends from "./Friends";
 
