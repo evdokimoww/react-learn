@@ -1,12 +1,12 @@
 import React from "react";
 import s from "./ProfileInfo.module.css"
-import Preloader from "../../common/Preloader/Preloader";
+import Preloader from "../../../common/Preloader/Preloader";
+import ProfileStatus from './ProfileStatus.jsx'
 
 const ProfileInfo = (props) => {
     if( !props.profile ) {
         return <Preloader />
     }
-
     return (
         <div>
             <div>
@@ -14,6 +14,8 @@ const ProfileInfo = (props) => {
             </div>
             <div className={s.descriptionBlock}>
                 <img src={props.profile.photos.large}/>
+                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                <hr/>
                 <div><strong>Full Name: </strong>{props.profile.fullName}</div>
                 <div><strong>About Me: </strong>{props.profile.aboutMe}</div>
                 <div><strong>Need Job? </strong>{(props.profile.lookingForAJob) ? 'yes' : 'no' }</div>
