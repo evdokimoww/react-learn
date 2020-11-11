@@ -6,7 +6,6 @@ import {Field, reduxForm} from "redux-form";
 
 
 const Dialogs = (props) => {
-    debugger
     let dialogsItems = props.dialogs.map( dialog => <DialogItem name={dialog.name} id={dialog.id}/> )
     let messagesItems = props.messages.map( message => <Message message={message.text} /> )
 
