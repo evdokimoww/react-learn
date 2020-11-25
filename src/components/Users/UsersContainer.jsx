@@ -6,7 +6,6 @@ import {
     setCurrentPage,
     unfollow
 } from "../../redux/users-reducer";
-import Users from "./Users";
 import Preloader from "../../common/Preloader/Preloader";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
@@ -17,6 +16,7 @@ import {
     getPageSize,
     getTotalUsersCount, getUsers
 } from "../../redux/users-selectors";
+import {Users} from "./Users";
 
 class UsersContainer extends React.Component {
     componentDidMount() {

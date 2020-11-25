@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route, BrowserRouter, withRouter} from "react-router-dom";
+import {Route, withRouter} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -26,7 +26,6 @@ class App extends React.Component {
         }
 
         return (
-            <BrowserRouter>
                 <div className='app-wrapper'>
                     <HeaderContainer/>
                     <Sidebar/>
@@ -40,7 +39,6 @@ class App extends React.Component {
                         <Route path='/settings' render={() => <Settings/>}/>
                     </div>
                 </div>
-            </BrowserRouter>
         );
     }
 }
