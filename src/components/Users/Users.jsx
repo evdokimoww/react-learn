@@ -1,11 +1,11 @@
 import React from "react";
-import {Paginator} from "../../common/Paginator/Paginator";
 import {User} from "./User";
+import Paginator from "../../common/Paginator/Paginator";
 
 export const Users = ({currentPage, onPageChanged, totalUsersCount, pageSize, ...props}) => {
     return <div>
         <Paginator currentPage={currentPage} onPageChanged={onPageChanged}
-                   totalUsersCount={totalUsersCount} pageSize={pageSize} />
+                   totalItemsCount={totalUsersCount} pageSize={pageSize} />
         <div>
             { props.users.map(u => <User user={u}
                                          followingInProgress={props.followingInProgress}

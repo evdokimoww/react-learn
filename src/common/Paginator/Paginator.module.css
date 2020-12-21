@@ -1,4 +1,18 @@
+.paginator{
+    padding: 10px;
+}
+
 .selectedPage{
     font-weight: bold;
-    padding: 0 10px;
+    background-color: #fff !important;
+    border: 1px solid lightgray;
+}
+
+.pageNumber{
+    width: 30px;
+    padding: 5px 0;
+    margin: 0 1px;
+    background-color: #f7f7f7;
+    text-align: center;
+    display: inline-block;
 }
