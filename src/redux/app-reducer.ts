@@ -1,4 +1,7 @@
 import {getAuthUserData} from "./auth-reducer";
+import {Dispatch} from "redux";
+import {ThunkAction} from "redux-thunk";
+import {AppStateType} from "./redux-store";
 
 const INITIALIZED_SUCCESS = 'app/INITIALIZED_SUCCESS';
 
@@ -28,10 +31,12 @@ export default appReducer;
 type InitializedSuccessActionType = {
     type: typeof INITIALIZED_SUCCESS
 }
-
 export const initializedSuccess = (): InitializedSuccessActionType  => ({type: INITIALIZED_SUCCESS});
 
-export const initializeApp = () => {
+// type ActionsTypes = InitializedSuccessActionType
+// type DispatchType = Dispatch<ActionsTypes>
+
+export const initializeApp = ()  => {
     return (dispatch: any) => {
         let promise = dispatch(getAuthUserData());
 
