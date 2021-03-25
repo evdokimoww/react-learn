@@ -1,4 +1,4 @@
-import {profileAPI, ResultCodesEnum, userAPI} from "../api/api";
+import {ResultCodesEnum} from "../api/api";
 import {stopSubmit} from "redux-form";
 import {PhotosType, PostType, ProfileType } from "../types/types";
 import {Dispatch} from "redux";
@@ -6,6 +6,8 @@ import {ThunkAction, ThunkDispatch} from "redux-thunk";
 import {AppStateType} from "./redux-store";
 import App from "../App";
 import {type} from "os";
+import {userAPI} from "../api/users-api";
+import {profileAPI} from "../api/profile-api";
 
 const ADD_POST = 'profile/ADD-POST';
 const SET_PROFILE = 'profile/SET_PROFILE';
