@@ -36,7 +36,7 @@ type MapDispatchPropsType = {
 }
 
 type OwnPropsType = {
-    pageNumber: number
+    pageNumber?: number
 }
 
 type PropsType = MapStatePropsType & MapDispatchPropsType & OwnPropsType
@@ -54,7 +54,8 @@ class UsersContainer extends React.Component<PropsType> {
     render() {
         return <>
             { this.props.isFetching ? <Preloader /> : null }
-        <Users totalUsersCount={this.props.totalUsersCount}
+
+            <Users totalUsersCount={this.props.totalUsersCount}
                       pageSize={this.props.pageSize}
                       currentPage={this.props.currentPage}
                       onPageChanged={this.onPageChanged}
@@ -80,5 +81,10 @@ let mapStateToProps = (state: AppStateType): MapStatePropsType => {
 export default compose(
     // TStateProps = {}, TDispatchProps = {}, TOwnProps = {}, State = DefaultState
     connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(
-        mapStateToProps, {follow, unfollow, setCurrentPage: actions.setCurrentPage, requestUsers})
+        mapStateToProps, {
+            follow,
+            unfollow,
+            setCurrentPage: actions.setCurrentPage,
+            requestUsers
+        })
 )(UsersContainer);

@@ -2,7 +2,6 @@ import React from "react"
 import s from "./FormsControls.module.css"
 import {Field, WrappedFieldMetaProps, WrappedFieldProps} from "redux-form"
 import {FieldValidatorType} from "../../utils/validators/validators"
-import {AddNewPostFormValuesType} from "../../components/Profile/MyPosts/MyPosts";
 
 type FormControlPropsType = {
     meta: WrappedFieldMetaProps

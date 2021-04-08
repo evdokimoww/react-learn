@@ -6,12 +6,12 @@ import {AppStateType} from "../../../redux/redux-store";
 
 let mapStateToProps = (state: AppStateType) => {
     return {
-        posts: state.profilePage.posts,
+        posts: state.profilePage.posts
     }
 }
 
 
-const MyPostsContainer = connect<MapPropsType & DispatchPropsType, {}, AppStateType>(mapStateToProps, {
+const MyPostsContainer = connect<MapPropsType, DispatchPropsType, {}, AppStateType>(mapStateToProps, {
     addPost: actions.addPostActionCreator
 })(MyPosts)
 
