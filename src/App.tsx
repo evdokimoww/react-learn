@@ -11,17 +11,18 @@ import {initializeApp} from "./redux/app-reducer";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import Preloader from "./common/Preloader/Preloader";
-
-//import DialogsContainer from "./components/Dialogs/DialogsContainer";
-//import UsersContainer from "./components/Users/UsersContainer";
-//import ProfileContainer from "./components/Profile/ProfileContainer";
+import {AppStateType} from "./redux/redux-store";
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 
+type MapPropsType = ReturnType<typeof mapStateToProps>
+type DispatchPropsType = {
+    initializeApp: () => void
+}
 
-class App extends React.Component {
+class App extends React.Component<MapPropsType & DispatchPropsType> {
     componentDidMount() {
         this.props.initializeApp();
     }
@@ -47,13 +48,14 @@ class App extends React.Component {
                         <Route path='/news' render={() => <News/>}/>
                         <Route path='/music' render={() => <Music/>}/>
                         <Route path='/settings' render={() => <Settings/>}/>
+                        <Route path='*' render={() => <div>404 NOT FOUND</div>}/>
                     </div>
                 </div>
         );
     }
 }
 
-let mapStateToProps = (state) => ({
+let mapStateToProps = (state: AppStateType) => ({
     initialized: state.app.initialized
 })
 

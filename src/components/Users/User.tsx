@@ -2,8 +2,16 @@ import {NavLink} from "react-router-dom";
 import s from "./Users.module.css";
 import UserImage from "../../assets/images/user.png";
 import React from "react";
+import {UserType} from "../../types/types";
 
-export const User = ({user, followingInProgress, unfollow, follow, ...props}) => {
+type PropsType = {
+    user: UserType,
+    followingInProgress: Array<number>
+    unfollow: (userId: number) => void,
+    follow: (userId: number) => void
+}
+
+export const User: React.FC<PropsType> = ({user, followingInProgress, unfollow, follow, ...props}) => {
     return <div>
         <div>
             <NavLink to={`/profile/` + user.id}>
