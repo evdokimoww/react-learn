@@ -75,6 +75,8 @@ export const actions =  {
 
 export const requestUsers = (pageSize: number, currentPage: number): ThunkType => async (dispatch) => {
         dispatch(actions.toggleIsFetching(true));
+        dispatch(actions.setCurrentPage(currentPage));
+
         let response = await userAPI.getUser(pageSize, currentPage);
 
         dispatch(actions.toggleIsFetching(false));

@@ -22,7 +22,7 @@ const Dialogs: React.FC<OwnPropsType> = (props) => {
     let messagesItems = props.messages.map( message => <Message message={message.text} /> )
 
     let addNewMessage = (values: {newMessageText: string}) => {
-        props.sendMessage(values.newMessageText);
+        props.sendMessage(values.newMessageText)
     }
 
     return (
