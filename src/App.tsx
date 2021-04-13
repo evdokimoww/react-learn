@@ -6,13 +6,13 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import HeaderContainer from "./components/Header/HeaderContainer";
-import Login from "./components/Login/Login";
 import {initializeApp} from "./redux/app-reducer";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import Preloader from "./common/Preloader/Preloader";
 import {AppStateType, store} from "./redux/redux-store";
 import { UserPage } from './components/Users/UsersContainer';
+import { Login } from './components/Login/Login';
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
